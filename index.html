@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comando Riformista - Sito Ufficiale</title>
+    <style>
+        :root {
+            --military-green: #3B4D3C; /* Verde militare profondo */
+            --renzi-magenta: #D10074;  /* Magenta riformista */
+            --light-bg: #F4F6F4;
+            --dark-text: #232B22;
+            --white: #FFFFFF;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            color: var(--dark-text);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--military-green);
+            color: var(--white);
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--renzi-magenta);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            letter-spacing: 2px;
+            font-weight: 900;
+        }
+
+        header p {
+            margin: 10px 0 0 0;
+            font-size: 1.2rem;
+            color: var(--renzi-magenta);
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Sistema di Navigazione a Schede */
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            background-color: #2D3A2E;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            color: #A3B8A4;
+            padding: 15px 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .tab-btn:hover {
+            color: var(--white);
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        .tab-btn.active {
+            color: var(--white);
+            border-bottom: 4px solid var(--renzi-magenta);
+            background-color: var(--military-green);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .tab-content {
+            display: none;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Elementi Grafici e Immagini */
+        .hero-img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 30px;
+            border-bottom: 3px solid var(--military-green);
+        }
+
+        h2, h3 {
+            color: var(--military-green);
+            border-left: 5px solid var(--renzi-magenta);
+            padding-left: 15px;
+        }
+
+        .pillar-card {
+            background: #F9FBF9;
+            border: 1px solid #E2E8E2;
+            border-left: 4px solid var(--military-green);
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 4px;
+        }
+
+        .pillar-card h4 {
+            margin-top: 0;
+            color: var(--renzi-magenta);
+            font-size: 1.2rem;
+        }
+
+        .legal-box {
+            background-color: #ECEFEC;
+            border-left: 4px solid var(--renzi-magenta);
+            padding: 15px 20px;
+            margin: 15px 0;
+            font-style: italic;
+        }
+
+        footer {
+            background-color: var(--military-green);
+            color: var(--white);
+            text-align: center;
+            padding: 25px;
+            margin-top: 60px;
+            border-top: 4px solid var(--renzi-magenta);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>COMANDO RIFORMISTA</h1>
+        <p>Efficienza Tecnocratica &bull; Prontezza Europea &bull; Resilienza Costituzionale</p>
+    </header>
+
+    <div class="nav-tabs">
+        <button class="tab-btn active" onclick="openTab(event, 'manifesto')">Il Manifesto</button>
+        <button class="tab-btn" onclick="openTab(event, 'programma')">Programma Completo</button>
+        <button class="tab-btn" onclick="openTab(event, 'legalita')">Scudo Legale (Costituzione)</button>
+    </div>
+
+    <div class="container">
+
+        <!-- SCHEDA 1: IL MANIFESTO -->
+        <div id="manifesto" class="tab-content active">
+            <img class="hero-img" src="https://unsplash.com" alt="Tecnologia e Geopolitica">
+            <h2>Manifesto di Resilienza Strategica</h2>
+            <p>L'Italia non ha bisogno di populismi gridati o di burocrazie paralizzanti che bloccano lo sviluppo. Ripudiamo categoricamente la retorica nazionalista e sovranista della vecchia destra conservatrice. Crediamo fermamente negli Stati Uniti d'Europa, nell'innovazione digitale di mercato, nel merito e nella crescita economica globale.</p>
+            <p>Ma siamo pragmatici: in un mondo tornato instabile, il riformismo progressista non può permettersi di essere debole o indeciso. Deve farsi <strong>struttura, velocità e comando logistico</strong>. Applichiamo l'architettura organizzativa e l'efficienza dello Stato Maggiore alle riforme civili per sbloccare i cantieri energetici, modernizzare le imprese e proteggere il lavoro, rimanendo inattaccabili sul piano della legalità repubblicana.</p>
+            <h3>I Nostri Colori: Verde Militare e Magenta</h3>
+            <p>Il <strong>Verde Militare</strong> rappresenta la logistica strutturata, la prontezza difensiva delle istituzioni e la sicurezza delle infrastrutture tecnologiche. Il <strong>Magenta</strong> simboleggia l'energia del riformismo liberale, l'anti-conservatorismo e l'audacia di un'agenda politica dinamica e pro-business. Insieme, rompono i vecchi schemi ideologici di destra e sinistra tradizionale.</p>
+        </div>
+
+        <!-- SCHEDA 2: PROGRAMMA COMPLETO -->
+        <div id="programma" class="tab-content">
+            <img class="hero-img" src="https://unsplash.com" alt="Industria e Difesa">
+            <h2>Il Programma di Governo Generato in Chiave Strategica</h2>
+            
+            <div class="pillar-card">
+                <h4>1. Pubblica Amministrazione Logistica</h4>
+                <p><strong>Genio Militare Sblocca-Cantieri:</strong> Tutte le grandi opere nazionali o i progetti industriali bloccati da ricorsi burocratici o liti civili vengono commissariati d'ufficio e affidati alla direzione logistica ed esecutiva del Genio Militare per decretarne tempi d'azione certi e immediati.</p>
+                <p><strong>Catena di Comando nei Ministeri:</strong> Introduzione di quote di Alti Ufficiali dello Stato Maggiore nei ruoli amministrativi dei ministeri tecnici (Infrastrutture, Transizione Digitale) per azzerare i tempi morti della burocrazia statale e accelerare le decisioni.</p>
+            </div>
+
+            <div class="pillar-card">
+                <h4>2. Lavoro a Tutele Crescenti e Mobilitazione Tecnica</h4>
+                <p><strong>Inquadramento Strategico del Lavoro:</strong> Mantenimento della totale flessibilità, del merito e del sistema basato sul contratto unico a tutele crescenti. Nei comparti ad alta rilevanza (cybersecurity, energia, aerospazio) si applicano contratti aziendali veloci ma con clausole di "mobilitazione tecnica" per la gestione immediata delle emergenze digitali nazionali.</p>
+                <p><strong>Incentivazione Dual-Use:</strong> Decontribuzione totale per 3-5 anni e forti agevolazioni per le aziende private che integrano progetti di sviluppo tecnologico coordinati con la sicurezza e la resilienza dello Stato.</p>
+            </div>
+
+            <div class="pillar-card">
+                <h4>3. Istruzione (Evoluzione Riformista della Scuola)</h4>
+                <p><strong>Presidi dell'Accademia negli ITS:</strong> Gli Istituti Tecnici Superiori dedicati allo spazio, all'intelligenza artificiale e alle infrastrutture critiche vengono cogestiti con ufficiali formatori per rendere l'addestramento pratico dei giovani immediatamente competitivo a livello internazionale.</p>
+                <p><strong>Esame con Modulo di Resilienza:</strong> Introduzione nei programmi scolastici superiori di elementi obbligatori di geopolitica applicata, logistica e cybersecurity, valutati da commissioni congiunte.</p>
+            </div>
+
+            <div class="pillar-card">
+                <h4>4. Geopolitica Pragmatica: I 1.1 Milioni di Advisory Strategica</h4>
+                <p><strong>Canali Diplomatico-Industriali:</strong> Le relazioni economiche consolidate nel Golfo Persico (come le attività di advisory sulle città intelligenti e tecnologiche di nuova fondazione a livello internazionale) vengono istituzionalizzate e utilizzate come avamposto di Intelligence Economica per il Paese.</p>
+                <p><strong>Fondo per Startup Tecnologiche:</strong> Trasformazione dei contratti di consulenza in piattaforme di interscambio per collocare l'industria italiana dell'alta sorveglianza e della logistica al vertice dei mercati esteri, vincolando i flussi economici a un fondo di finanziamento per la ricerca cibernetica nazionale.</p>
+            </div>
+
+            <div class="pillar-card">
+                <h4>5. Stati Uniti d'Europa e Campioni Industriali</h4>
+                <p><strong>Esercito Unico Europeo Immediato:</strong> Superamento immediato dei veti dei singoli stati per istituire un comando difensivo continentale integrato di cui il nostro Paese detiene la leadership logistica marittima e strategica.</p>
+
+Eurobond della Difesa Tecnologica: Emissione di titoli europei per la fusione coordinata e strategica dei colossi industriali dell'aerospazio con i partner europei per creare un blocco industriale autonomo, pro-crescita e protetto.
+
+Legittimità Costituzionale e Precedenti Storici
+Questo programma non viola gli Articoli 11 e 13 della Costituzione Italiana. Non è una dittatura militare né uno stato d'assedio: non si tocca la libertà personale dei cittadini e si rifiuta categoricamente ogni forma di guerra d'aggressione. Si tratta invece di una riforma dei metodi manageriali dello Stato civile mediante l'organizzazione logistica militare. Ecco i nostri pilastri legali:
+Il Precedente Reale: La Logistica d'Emergenza
+
+"L'utilizzo delle strutture e dei vertici militari per gestire opere civili o emergenze complesse è pienamente coperto dal concetto di dual-use (Art. 89 del Codice dell'Ordinamento Militare). La storia recente della gestione delle emergenze sanitarie e idrogeologiche in Italia ha ampiamente dimostrato che affidare la catena logistica dello Stato ai generali per superare i blocchi burocratici è costituzionale, legittimo ed estremamente efficace."
+Articolo 52: Il Sacro Dovere
+
+"La Costituzione afferma che la difesa della Patria è un sacro dovere del cittadino. Le nostre clausole di mobilitazione tecnica nel mercato del lavoro estendono questo concetto in chiave moderna: difendere la stabilità informatica ed energetica del Paese attraverso il proprio lavoro qualificato è un dovere costituzionale attuabile con legge ordinaria."
+Articolo 97: Trasparenza ed Efficienza
+
+"La presenza di Alti Ufficiali nei ministeri tecnici non elude i concorsi civili. Si configura come una procedura di distacco strategico per la sicurezza delle infrastrutture critiche, migliorando l'andamento della Pubblica Amministrazione secondo rigorosi criteri di efficienza organizzativa."
+Politica Estera e Trattati (Art. 80 e 87)
+
+"L'indirizzo dei rapporti economici e di advisory internazionale è una prerogativa dell'alta politica industriale del Governo e del Parlamento. Strutturare tali canali commerciali per favorire le aziende partecipate di Stato operanti nell'alta tecnologia è un atto sovrano perfettamente legittimo."
+
+© 2026 Comando Riformista - Direzione Logistica per l'Efficienza Istituzionale. Progetto Costituzionale.
+function openTab(evt, tabName) {
+var i, tabcontent, tablinks;
+// Nascondi tutti i contenuti delle schede
+tabcontent = document.getElementsByClassName("tab-content");
+for (i = 0; i < tabcontent.length; i++) {
+tabcontent[i].className = tabcontent[i].className.replace(" active", "");
+}
+// Rimuovi la classe "active" da tutti i bottoni
+tablinks = document.getElementsByClassName("tab-btn");
+for (i = 0; i < tablinks.length; i++) {
+tablinks[i].className = tablinks[i].className.replace(" active", "");
+}
+// Mostra la scheda corrente e aggiungi la classe "active" al bottone premuto
+document.getElementById(tabName).className += " active";
+evt.currentTarget.className += " active";
+}
