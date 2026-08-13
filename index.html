@@ -5,189 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comando Riformista - Sito Ufficiale</title>
     <style>
-        :root {
-            --military-green: #3B4D3C; /* Verde militare profondo */
-            --renzi-magenta: #D10074;  /* Magenta riformista */
-            --light-bg: #F4F6F4;
-            --dark-text: #232B22;
-            --white: #FFFFFF;
+        :root { 
+            --military: #3B4D3C; 
+            --magenta: #D10074; 
+            --bg: #F4F6F4; 
+            --text: #232B22; 
         }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--light-bg);
-            color: var(--dark-text);
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: var(--military-green);
-            color: var(--white);
-            padding: 40px 20px;
-            text-align: center;
-            border-bottom: 5px solid var(--renzi-magenta);
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.8rem;
-            letter-spacing: 2px;
-            font-weight: 900;
-        }
-
-        header p {
-            margin: 10px 0 0 0;
-            font-size: 1.2rem;
-            color: var(--renzi-magenta);
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-
-        /* Sistema di Navigazione a Schede */
-        .nav-tabs {
-            display: flex;
-            justify-content: center;
-            background-color: #2D3A2E;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            flex-wrap: wrap;
-        }
-
-        .tab-btn {
-            background: none;
-            border: none;
-            color: #A3B8A4;
-            padding: 15px 25px;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-        }
-
-        .tab-btn:hover {
-            color: var(--white);
-            background-color: rgba(255,255,255,0.05);
-        }
-
-        .tab-btn.active {
-            color: var(--white);
-            border-bottom: 4px solid var(--renzi-magenta);
-            background-color: var(--military-green);
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        .tab-content {
-            display: none;
-            background: var(--white);
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-
-        .hero-img {
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
-            border-radius: 6px;
-            margin-bottom: 30px;
-            border-bottom: 3px solid var(--military-green);
-        }
-
-        h2, h3 {
-            color: var(--military-green);
-            border-left: 5px solid var(--renzi-magenta);
-            padding-left: 15px;
-        }
-
-        .pillar-card {
-            background: #F9FBF9;
-            border: 1px solid #E2E8E2;
-            border-left: 4px solid var(--military-green);
-            padding: 20px;
-            margin-bottom: 25px;
-            border-radius: 4px;
-        }
-
-        .pillar-card h4 {
-            margin-top: 0;
-            color: var(--renzi-magenta);
-            font-size: 1.2rem;
-        }
-
-        .legal-box {
-            background-color: #ECEFEC;
-            border-left: 4px solid var(--renzi-magenta);
-            padding: 15px 20px;
-            margin: 15px 0;
-            font-style: italic;
-        }
-
-        /* Grafica del Modulo Contatti */
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 5px;
-            color: var(--military-green);
-        }
-
-        .form-group input, .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #E2E8E2;
-            border-radius: 4px;
-            box-sizing: border-box;
-            font-family: inherit;
-            font-size: 1rem;
-        }
-
-        .form-group input:focus, .form-group textarea:focus {
-            outline: none;
-            border-color: var(--renzi-magenta);
-            box-shadow: 0 0 5px rgba(209, 0, 116, 0.2);
-        }
-
-        .submit-btn {
-            background-color: var(--military-green);
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            font-size: 1rem;
-            font-weight: bold;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background 0.2s ease;
-            text-transform: uppercase;
-            border-bottom: 3px solid var(--renzi-magenta);
-        }
-
-        .submit-btn:hover {
-            background-color: #2D3A2E;
-        }
-
-        footer {
-            background-color: var(--military-green);
-            color: var(--white);
-            text-align: center;
-            padding: 25px;
-            margin-top: 60px;
-            border-top: 4px solid var(--renzi-magenta);
-            font-size: 0.9rem;
-        }
+        body { font-family: sans-serif; margin: 0; padding: 0; background: var(--bg); color: var(--text); line-height: 1.5; }
+        header { background: var(--military); color: white; padding: 30px 15px; text-align: center; border-bottom: 5px solid var(--magenta); }
+        header h1 { margin: 0; font-size: 2.2rem; }
+        header p { margin: 5px 0 0 0; color: var(--magenta); font-weight: bold; font-size: 0.9rem; text-transform: uppercase; }
+        .nav-tabs { display: flex; justify-content: center; background: #2D3A2E; flex-wrap: wrap; }
+        .tab-btn { background: none; border: none; color: #A3B8A4; padding: 12px 15px; font-size: 0.9rem; font-weight: bold; cursor: pointer; text-transform: uppercase; }
+        .tab-btn.active { color: white; border-bottom: 4px solid var(--magenta); background: var(--military); }
+        .container { max-width: 800px; margin: 20px auto; padding: 0 15px; }
+        .tab-content { display: none; background: white; padding: 25px; border-radius: 6px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .tab-content.active { display: block; }
+        .hero-img { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 20px; }
+        h2 { color: var(--military); border-left: 4px solid var(--magenta); padding-left: 10px; font-size: 1.5rem; margin-top: 0; }
+        .pillar-card { background: #F9FBF9; border-left: 4px solid var(--military); padding: 15px; margin-bottom: 15px; border-radius: 4px; border-top: 1px solid #E2E8E2; border-right: 1px solid #E2E8E2; border-bottom: 1px solid #E2E8E2; }
+        .pillar-card h4 { margin: 0 0 5px 0; color: var(--magenta); font-size: 1.1rem; }
+        .legal-box { background: #ECEFEC; border-left: 4px solid var(--magenta); padding: 12px; margin: 10px 0; font-style: italic; font-size: 0.95rem; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; font-weight: bold; margin-bottom: 5px; color: var(--military); }
+        .form-group input, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #E2E8E2; border-radius: 4px; box-sizing: border-box; font-size: 1rem; }
+        .submit-btn { background: var(--military); color: white; border: none; padding: 12px 25px; font-size: 1rem; font-weight: bold; border-radius: 4px; cursor: pointer; text-transform: uppercase; border-bottom: 3px solid var(--magenta); width: 100%; }
+        footer { background: var(--military); color: white; text-align: center; padding: 20px; border-top: 4px solid var(--magenta); font-size: 0.8rem; }
     </style>
 </head>
 <body>
@@ -198,94 +41,135 @@
     </header>
 
     <div class="nav-tabs">
-        <button id="btn-manifesto" class="tab-btn active" onclick="openTab(event, 'manifesto')">Il Manifesto</button>
-        <button id="btn-programma" class="tab-btn" onclick="openTab(event, 'programma')">Programma Completo</button>
-        <button id="btn-legalita" class="tab-btn" onclick="openTab(event, 'legalita')">Scudo Legale (Costituzione)</button>
-        <button id="btn-contatti" class="tab-btn" onclick="openTab(event, 'contatti')">Unisciti a noi</button>
+        <button id="btn-manifesto" class="tab-btn active" onclick="changeTab('manifesto', this)">Manifesto</button>
+        <button id="btn-programma" class="tab-btn" onclick="changeTab('programma', this)">Programma</button>
+        <button id="btn-legalita" class="tab-btn" onclick="changeTab('legalita', this)">Scudo Legale</button>
+        <button id="btn-contatti" class="tab-btn" onclick="changeTab('contatti', this)">Unisciti</button>
     </div>
 
     <div class="container">
 
         <!-- SCHEDA 1: IL MANIFESTO -->
         <div id="manifesto" class="tab-content active">
-            <img class="hero-img" src="https://unsplash.com" alt="Tecnologia e Geopolitica">
+            <img class="hero-img" src="https://unsplash.com" alt="Tecnologia">
             <h2>Manifesto di Resilienza Strategica</h2>
-            <p>L'Italia non ha bisogno di populismi gridati o di burocrazie paralizzanti che bloccano lo sviluppo. Ripudiamo categoricamente la retorica nazionalista e sovranista della vecchia destra conservatrice. Crediamo fermamente negli Stati Uniti d'Europa, nell'innovazione digitale di mercato, nel merito e nella crescita economica globale.</p>
-            <p>Ma siamo pragmatici: in un mondo tornato instabile, il riformismo progressista non può permettersi di essere debole o indeciso. Deve farsi <strong>struttura, velocità e comando logistico</strong>. Applichiamo l'architettura organizzativa e l'efficienza dello Stato Maggiore alle riforme civili per sbloccare i cantieri energetici, modernizzare le imprese e proteggere il lavoro, rimanendo inattaccabili sul piano della legalità repubblicana.</p>
+            <p>L'Italia non ha bisogno di populismi gridati o di burocrazie paralizzanti che bloccano lo sviluppo. Ripudiamo la retorica nazionalista della vecchia destra conservatrice. Crediamo negli Stati Uniti d'Europa, nell'innovazione digitale di mercato, nel merito e nella crescita economica globale.</p>
+            <p>In un mondo instabile, il riformismo progressista deve farsi <strong>struttura, velocità e comando logistico</strong>. Applichiamo l'efficienza dello Stato Maggiore alle riforme civili per sbloccare i cantieri energetici, modernizzare le imprese e proteggere il lavoro, rimanendo inattaccabili sulla legalità repubblicana.</p>
             <h3>I Nostri Colori: Verde Militare e Magenta</h3>
-            <p>Il <strong>Verde Militare</strong> rappresenta la logistica strutturata, la prontezza difensiva delle istituzioni e la sicurezza delle infrastrutture tecnologiche. Il <strong>Magenta</strong> simboleggia l'energia del riformismo liberale, l'anti-conservatorismo e l'audacia di un'agenda politica dinamica e pro-business. Insieme, rompono i vecchi schemi ideologici di destra e sinistra tradizionale.</p>
+            <p>Il <strong>Verde Militare</strong> rappresenta la logistica strutturata e la prontezza difensiva delle istituzioni. Il <strong>Magenta</strong> simboleggia l'energia del riformismo liberale e l'audacia di un'agenda politica dinamica. Insieme, rompono i vecchi schemi ideologici.</p>
         </div>
 
         <!-- SCHEDA 2: PROGRAMMA COMPLETO -->
         <div id="programma" class="tab-content">
-            <img class="hero-img" src="https://unsplash.com" alt="Industria e Difesa">
-            <h2>Il Programma di Governo Generato in Chiave Strategica</h2>
+            <img class="hero-img" src="https://unsplash.com" alt="Industria">
+            <h2>Il Programma di Governo Strategico</h2>
             
             <div class="pillar-card">
                 <h4>1. Pubblica Amministrazione Logistica</h4>
-                <p><strong>Genio Militare Sblocca-Cantieri:</strong> Tutte le grandi opere nazionali o i progetti industriali bloccati da ricorsi burocratici o liti civili vengono commissariati d'ufficio e affidati alla direzione logistica ed esecutiva del Genio Militare per decretarne tempi d'azione certi e immediati.</p>
-                <p><strong>Catena di Comando nei Ministeri:</strong> Introduzione di quote di Alti Ufficiali dello Stato Maggiore nei ruoli amministrativi dei ministeri tecnici (Infrastrutture, Transizione Digitale) per azzerare i tempi morti della burocrazia statale e accelerare le decisioni.</p>
+                <p><strong>Genio Militare Sblocca-Cantieri:</strong> Le grandi opere nazionali e i progetti industriali bloccati da ricorsi burocratici vengono commissariati d'ufficio e affidati alla direzione esecutiva del Genio Militare per decretarne tempi d'azione certi e immediati.</p>
+                <p><strong>Catena di Comando nei Ministeri:</strong> Introduzione di quote di Alti Ufficiali dello Stato Maggiore nei ruoli amministrativi dei ministeri tecnici per azzerare i tempi morti della burocrazia civile.</p>
             </div>
 
             <div class="pillar-card">
                 <h4>2. Lavoro a Tutele Crescenti e Mobilitazione Tecnica</h4>
-                <p><strong>Inquadramento Strategico del Lavoro:</strong> Mantenimento della totale flessibilità, del merito e del sistema basato sul contratto unico a tutele crescenti. Nei comparti ad alta rilevanza (cybersecurity, energia, aerospazio) si applicano contratti aziendali veloci ma con clausole di "mobilitazione tecnica" per la gestione immediata delle emergenze digitali nazionali.</p>
-                <p><strong>Incentivazione Dual-Use:</strong> Decontribuzione totale per 3-5 anni e forti agevolazioni per le aziende private che integrano progetti di sviluppo tecnologico coordinati con la sicurezza e la resilienza dello Stato.</p>
+                <p><strong>Inquadramento Strategico del Lavoro:</strong> Mantenimento della flessibilità e del sistema basato sul contratto unico a tutele crescenti. Nei comparti critici (cybersecurity, energia) si applicano contratti veloci con clausole di mobilitazione per la gestione delle emergencies nazionali.</p>
+                <p><strong>Incentivazione Dual-Use:</strong> Decontribuzione totale per 3-5 anni per le aziende private che integrano progetti di sviluppo tecnologico coordinati con la sicurezza dello Stato.</p>
             </div>
 
             <div class="pillar-card">
                 <h4>3. Istruzione (Evoluzione Riformista della Scuola)</h4>
-                <p><strong>Presidi dell'Accademia negli ITS:</strong> Gli Istituti Tecnici Superiori dedicati allo spazio, all'intelligenza artificiale e alle infrastrutture critiche vengono cogestiti con ufficiali formatori per rendere l'addestramento pratico dei giovani immediatamente competitivo a livello internazionale.</p>
+                <p><strong>Presidi dell'Accademia negli ITS:</strong> Gli Istituti Tecnici Superiori dedicati allo spazio e all'intelligenza artificiale vengono cogestiti con ufficiali formatori per rendere l'addestramento dei giovani competitivo a livello internazionale.</p>
+                <p><strong>Esame con Modulo di Resilienza:</strong> Introduzione nei programmi scolastici di elementi obbligatori di geopolitica applicata, logistica e cybersecurity.</p>
+            </div>
 
-Esame con Modulo di Resilienza: Introduzione nei programmi scolastici superiori di elementi obbligatori di geopolitica applicata, logistica e cybersecurity, valutati da commissioni congiunte.
-4. Geopolitica Pragmatica: I 1.1 Milioni di Advisory Strategica
-Canali Diplomatico-Industriali: Le relazioni economiche consolidate nel Golfo Persico (come le attività di advisory sulle città intelligenti e tecnologiche di nuova fondazione a livello internazionale) vengono istituzionalizzate e utilizzate come avamposto di Intelligence Economica per il Paese.
-Fondo per Startup Tecnologiche: Trasformazione dei contratti di consulenza in piattaforme di interscambio per collocare l'industria italiana dell'alta sorveglianza e della logistica al vertice dei mercati esteri, vincolando i flussi economici a un fondo di finanziamento per la ricerca cibernetica nazionale.
-5. Stati Uniti d'Europa e Campioni Industriali
-Esercito Unico Europeo Immediato: Superamento immediato dei veti dei singoli stati per istituire un comando difensivo continentale integrato di cui il nostro Paese detiene la leadership logistica marittima e strategica.
-Eurobond della Difesa Tecnologica: Emissione di titoli europei per la fusione coordinata e strategica dei colossi industriali dell'aerospazio con i partner europei per creare un blocco industriale autonomo, pro-crescita e protetto.
+            <div class="pillar-card">
+                <h4>4. Geopolitica Pragmatica: I 1.1 Milioni di Advisory</h4>
+                <p><strong>Canali Diplomatico-Industriali:</strong> Le relazioni economiche considerate sulle città intelligenti vengono istituzionalizzate e utilizzate come avamposto di Intelligence Economica per il Paese.</p>
+                <p><strong>Fondo per Startup:</strong> I flussi commerciali esteri vengono vincolati a un fondo di finanziamento per la ricerca cibernetica e tecnologica nazionale.</p>
+            </div>
 
-Legittimità Costituzionale e Precedenti Storici
-Questo programma non viola gli Articoli 11 e 13 della Costituzione Italiana. Non è una dittatura militare né uno stato d'assedio: non si tocca la libertà personale dei cittadini e si rifiuta categoricamente ogni forma di guerra d'aggressione. Si tratta invece di una riforma dei metodi manageriali dello Stato civile mediante l'organizzazione logistica militare. Ecco i nostri pilastri legali:
-Il Precedente Reale: La Logistica d'Emergenza
+            <div class="pillar-card">
+                <h4>5. Stati Uniti d'Europa</h4>
+                <p><strong>Esercito Unico Europeo Immediato:</strong> Superamento dei veti per istituire un comando difensivo continentale integrato di cui il nostro Paese detiene la leadership logistica marittima.</p>
+                <p><strong>Eurobond della Difesa:</strong> Titoli europei per la fusione coordinata dei colossi industriali dell'aerospazio con i partner europei per creare un blocco industriale autonomo.</p>
+            </div>
+        </div>
 
-"L'utilizzo delle strutture e dei vertici militari per gestire opere civili o emergenze complesse è pienamente coperto dal concetto di dual-use (Art. 89 del Codice dell'Ordinamento Militare). La storia recente della gestione delle emergenze sanitarie e idrogeologiche in Italia ha ampiamente dimostrato che affidare la catena logistica dello Stato ai generali per superare i blocchi burocratici è costituzionale, legittimo ed estremamente efficace."
-Articolo 52: Il Sacro Dovere
+        <!-- SCHEDA 3: SCUDO LEGALE -->
+        <div id="legalita" class="tab-content">
+            <img class="hero-img" src="https://unsplash.com" alt="Legge">
+            <h2>Legittimità Costituzionale</h2>
+            <p>Questo programma <strong>non viola gli Articoli 11 e 13 della Costituzione</strong>. Si tratta di una riforma dei metodi manageriali dello Stato civile mediante l'organizzazione logistica militare. Ecco i nostri pilastri legali:</p>
 
-"La Costituzione afferma che la difesa della Patria è un sacro dovere del cittadino. Le nostre clausole di mobilitazione tecnica nel mercato del lavoro estendono questo concetto in chiave moderna: difendere la stabilità informatica ed energetica del Paese attraverso il proprio lavoro qualificato è un dovere costituzionale attuabile con legge ordinaria."
-Articolo 97: Trasparenza ed Efficienza
+            <h3>Il Precedente Reale: La Logistica d'Emergenza</h3>
+            <div class="legal-box">
+                L'utilizzo delle strutture militari per gestire opere civili o emergenze complesse è coperto dal concetto di <strong>dual-use</strong> (Art. 89 del Codice dell'Ordinamento Militare). Affidare la logistica statale ai generali per superare i blocchi burocratici è costituzionale, legittimo ed efficace.
+            </div>
 
-"La presenza di Alti Ufficiali nei ministeri tecnici non elude i concorsi civili. Si configura come una procedura di distacco strategico per la sicurezza delle infrastrutture critiche, migliorando l'andamento della Pubblica Amministrazione secondo rigorosi criteri di efficienza organizzativa."
-Politica Estera e Trattati (Art. 80 e 87)
+            <h3>Articolo 52: Il Sacro Dovere</h3>
+            <div class="legal-box">
+                La Costituzione afferma che la difesa della Patria è un sacro dovere. Le nostre clausole estendono questo concetto: difendere la stabilità informatica ed energetica del Paese attraverso il proprio lavoro qualificato è un dovere costituzionale attuabile con legge ordinaria.
+            </div>
 
-"L'indirizzo dei rapporti economici e di advisory internazionale è una prerogativa dell'alta politica industriale del Governo e del Parlamento. Strutturare tali canali commerciali per favorire le aziende partecipate di Stato operanti nell'alta tecnologia è un atto sovrano perfettamente legittimo."
+            <h3>Articolo 97: Trasparenza ed Efficienza</h3>
+            <div class="legal-box">
+                La presenza di Alti Ufficiali nei ministeri tecnici si configura come una procedura di distacco strategico per la sicurezza delle infrastrutture critiche, migliorando l'andamento della PA secondo criteri di efficienza.
 
 Arruolati nella Mobilitazione delle Idee
-Se credi in un riformismo forte, tecnologico ed efficiente, unisciti alla nostra rete logistica civico-militare. Compila il modulo sotto per inviare la tua candidatura o le tue proposte programmatiche direttamente alla nostra centrale operativa.
+Se credi in un riformismo forte, tecnologico ed efficiente, unisciti alla nostra rete logistica. Invia le tue proposte programmatiche direttamente alla nostra centrale operativa.
+Nome / Pseudonimo:
+La tua Email:
+Il tuo messaggio:
 Invia alla Centrale
 
 
-© 2026 Comando Riformista - Direzione Logistica per l'Efficienza Istituzionale. Progetto Costituzionale.
-function openTab(evt, tabName) {
-var i, tabcontent, tablinks;
-tabcontent = document.getElementsByClassName("tab-content");
-for (i = 0; i < tabcontent.length; i++) {
-tabcontent[i].style.display = "none";
-tabcontent[i].className = tabcontent[i].className.replace(" active", "");
+© 2026 Comando Riformista - Direzione Logistica per l'Efficienza Istituzionale.
+function changeTab(tabId, buttonElement) {
+var contents = document.getElementsByClassName("tab-content");
+for (var i = 0; i < contents.length; i++) {
+contents[i].style.display = "none";
+contents[i].className = contents[i].className.replace(" active", "");
 }
-tablinks = document.getElementsByClassName("tab-btn");
-for (i = 0; i < tablinks.length; i++) {
-tablinks[i].className = tablinks[i].className.replace(" active", "");
+var buttons = document.getElementsByClassName("tab-btn");
+for (var j = 0; j < buttons.length; j++) {
+buttons[j].className = buttons[j].className.replace(" active", "");
 }
-document.getElementById(tabName).style.display = "block";
-document.getElementById(tabName).className += " active";
-if (evt) {
-evt.currentTarget.className += " active";
+var activeContent = document.getElementById(tabId);
+if (activeContent) {
+activeContent.style.display = "block";
+activeContent.className += " active";
+}
+if (buttonElement) {
+buttonElement.className += " active";
 }
 }
-        // Forza l'apertura automatica del Manifesto all'avvio
+window.onload = function() {
+changeTab('manifesto', document.getElementById('btn-manifesto'));
+};
+
+    <script>
+        function changeTab(tabId, buttonElement) {
+            var contents = document.getElementsByClassName("tab-content");
+            for (var i = 0; i < contents.length; i++) {
+                contents[i].style.display = "none";
+                contents[i].className = contents[i].className.replace(" active", "");
+            }
+            var buttons = document.getElementsByClassName("tab-btn");
+            for (var j = 0; j < buttons.length; j++) {
+                buttons[j].className = buttons[j].className.replace(" active", "");
+            }
+            var activeContent = document.getElementById(tabId);
+            if (activeContent) {
+                activeContent.style.display = "block";
+                activeContent.className += " active";
+            }
+            if (buttonElement) {
+                buttonElement.className += " active";
+            }
+        }
+
         window.onload = function() {
-            openTab(null, 'manifesto');
+            changeTab('manifesto', document.getElementById('btn-manifesto'));
         };
     </script>
 </body>
