@@ -51,6 +51,7 @@
             justify-content: center;
             background-color: #2D3A2E;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            flex-wrap: wrap;
         }
 
         .tab-btn {
@@ -94,7 +95,6 @@
             display: block;
         }
 
-        /* Elementi Grafici e Immagini */
         .hero-img {
             width: 100%;
             height: 350px;
@@ -133,6 +133,52 @@
             font-style: italic;
         }
 
+        /* Grafica del Modulo Contatti */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: var(--military-green);
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #E2E8E2;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--renzi-magenta);
+            box-shadow: 0 0 5px rgba(209, 0, 116, 0.2);
+        }
+
+        .submit-btn {
+            background-color: var(--military-green);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.2s ease;
+            text-transform: uppercase;
+            border-bottom: 3px solid var(--renzi-magenta);
+        }
+
+        .submit-btn:hover {
+            background-color: #2D3A2E;
+        }
+
         footer {
             background-color: var(--military-green);
             color: var(--white);
@@ -152,9 +198,10 @@
     </header>
 
     <div class="nav-tabs">
-        <button class="tab-btn active" onclick="openTab(event, 'manifesto')">Il Manifesto</button>
-        <button class="tab-btn" onclick="openTab(event, 'programma')">Programma Completo</button>
-        <button class="tab-btn" onclick="openTab(event, 'legalita')">Scudo Legale (Costituzione)</button>
+        <button id="btn-manifesto" class="tab-btn active" onclick="openTab(event, 'manifesto')">Il Manifesto</button>
+        <button id="btn-programma" class="tab-btn" onclick="openTab(event, 'programma')">Programma Completo</button>
+        <button id="btn-legalita" class="tab-btn" onclick="openTab(event, 'legalita')">Scudo Legale (Costituzione)</button>
+        <button id="btn-contatti" class="tab-btn" onclick="openTab(event, 'contatti')">Unisciti a noi</button>
     </div>
 
     <div class="container">
@@ -189,19 +236,13 @@
             <div class="pillar-card">
                 <h4>3. Istruzione (Evoluzione Riformista della Scuola)</h4>
                 <p><strong>Presidi dell'Accademia negli ITS:</strong> Gli Istituti Tecnici Superiori dedicati allo spazio, all'intelligenza artificiale e alle infrastrutture critiche vengono cogestiti con ufficiali formatori per rendere l'addestramento pratico dei giovani immediatamente competitivo a livello internazionale.</p>
-                <p><strong>Esame con Modulo di Resilienza:</strong> Introduzione nei programmi scolastici superiori di elementi obbligatori di geopolitica applicata, logistica e cybersecurity, valutati da commissioni congiunte.</p>
-            </div>
 
-            <div class="pillar-card">
-                <h4>4. Geopolitica Pragmatica: I 1.1 Milioni di Advisory Strategica</h4>
-                <p><strong>Canali Diplomatico-Industriali:</strong> Le relazioni economiche consolidate nel Golfo Persico (come le attività di advisory sulle città intelligenti e tecnologiche di nuova fondazione a livello internazionale) vengono istituzionalizzate e utilizzate come avamposto di Intelligence Economica per il Paese.</p>
-                <p><strong>Fondo per Startup Tecnologiche:</strong> Trasformazione dei contratti di consulenza in piattaforme di interscambio per collocare l'industria italiana dell'alta sorveglianza e della logistica al vertice dei mercati esteri, vincolando i flussi economici a un fondo di finanziamento per la ricerca cibernetica nazionale.</p>
-            </div>
-
-            <div class="pillar-card">
-                <h4>5. Stati Uniti d'Europa e Campioni Industriali</h4>
-                <p><strong>Esercito Unico Europeo Immediato:</strong> Superamento immediato dei veti dei singoli stati per istituire un comando difensivo continentale integrato di cui il nostro Paese detiene la leadership logistica marittima e strategica.</p>
-
+Esame con Modulo di Resilienza: Introduzione nei programmi scolastici superiori di elementi obbligatori di geopolitica applicata, logistica e cybersecurity, valutati da commissioni congiunte.
+4. Geopolitica Pragmatica: I 1.1 Milioni di Advisory Strategica
+Canali Diplomatico-Industriali: Le relazioni economiche consolidate nel Golfo Persico (come le attività di advisory sulle città intelligenti e tecnologiche di nuova fondazione a livello internazionale) vengono istituzionalizzate e utilizzate come avamposto di Intelligence Economica per il Paese.
+Fondo per Startup Tecnologiche: Trasformazione dei contratti di consulenza in piattaforme di interscambio per collocare l'industria italiana dell'alta sorveglianza e della logistica al vertice dei mercati esteri, vincolando i flussi economici a un fondo di finanziamento per la ricerca cibernetica nazionale.
+5. Stati Uniti d'Europa e Campioni Industriali
+Esercito Unico Europeo Immediato: Superamento immediato dei veti dei singoli stati per istituire un comando difensivo continentale integrato di cui il nostro Paese detiene la leadership logistica marittima e strategica.
 Eurobond della Difesa Tecnologica: Emissione di titoli europei per la fusione coordinata e strategica dei colossi industriali dell'aerospazio con i partner europei per creare un blocco industriale autonomo, pro-crescita e protetto.
 
 Legittimità Costituzionale e Precedenti Storici
@@ -219,20 +260,33 @@ Politica Estera e Trattati (Art. 80 e 87)
 
 "L'indirizzo dei rapporti economici e di advisory internazionale è una prerogativa dell'alta politica industriale del Governo e del Parlamento. Strutturare tali canali commerciali per favorire le aziende partecipate di Stato operanti nell'alta tecnologia è un atto sovrano perfettamente legittimo."
 
+Arruolati nella Mobilitazione delle Idee
+Se credi in un riformismo forte, tecnologico ed efficiente, unisciti alla nostra rete logistica civico-militare. Compila il modulo sotto per inviare la tua candidatura o le tue proposte programmatiche direttamente alla nostra centrale operativa.
+Invia alla Centrale
+
+
 © 2026 Comando Riformista - Direzione Logistica per l'Efficienza Istituzionale. Progetto Costituzionale.
 function openTab(evt, tabName) {
 var i, tabcontent, tablinks;
-// Nascondi tutti i contenuti delle schede
 tabcontent = document.getElementsByClassName("tab-content");
 for (i = 0; i < tabcontent.length; i++) {
+tabcontent[i].style.display = "none";
 tabcontent[i].className = tabcontent[i].className.replace(" active", "");
 }
-// Rimuovi la classe "active" da tutti i bottoni
 tablinks = document.getElementsByClassName("tab-btn");
 for (i = 0; i < tablinks.length; i++) {
 tablinks[i].className = tablinks[i].className.replace(" active", "");
 }
-// Mostra la scheda corrente e aggiungi la classe "active" al bottone premuto
+document.getElementById(tabName).style.display = "block";
 document.getElementById(tabName).className += " active";
+if (evt) {
 evt.currentTarget.className += " active";
 }
+}
+        // Forza l'apertura automatica del Manifesto all'avvio
+        window.onload = function() {
+            openTab(null, 'manifesto');
+        };
+    </script>
+</body>
+</html>
